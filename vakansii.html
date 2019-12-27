@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ЭлектроПрометей</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="./img/favicons/electroprometey-fav.png" type="image/png">
+
+    <link rel="stylesheet" href="../styles/main.min.css">
+</head>
+
+<body>
+    <div class="page_form">
+    
+    <div class="form-mask" onclick="closeForm()"></div>
+
+    <div class="form_wrapper">
+        
+        <form action="#" class="form">
+            <h3 class="form__title title">Вызов мастера</h3>
+            <label class="form__item">
+                <span class="form__input-name">Ваше имя</span>
+                <input class="form__input" name="name" type="text" placeholder="ФИО">
+            </label>
+            <label class="form__item">
+                <span class="form__input-name">Адрес</span>
+                <input class="form__input" name="address" type="text" placeholder="Улица, номер дома, номер помещения">
+            </label>
+            <label class="form__item">
+                <span class="form__input-name">Контактный телефон</span>
+                <input class="form__input" name="phone" type="tel" placeholder="+375 (__) __-__-_">
+            </label>
+            <label class="form__item">
+                <span class="form__input-name">Электронная почта</span>
+                <input class="form__input" name="email" type="mail" placeholder="name@mail.by">
+            </label>
+            <label class="form__item">
+                <span class="form__input-name">Описание необходимых работ</span>
+                <textarea class="form__textarea" name="description"></textarea>
+            </label>
+            <button class="form__button button">Отправить</button>
+        </form>
+        <button class="button-close" onclick="closeForm()">x</button>
+    </div>
+</div>
+
+    <script>
+    function showForm() {
+        document.querySelector("body").classList.add("form_show");
+    }
+
+    function closeForm() {
+        document.querySelector("body").classList.remove("form_show");
+    }
+</script>
+
+<header class="header">
+    <div class="topbar flex flex_sb">
+        <a href="index.html"><img src="../../../img/logo.png" alt="" class="logo"></a>
+        <div class="container flex">
+            <ul class="list list_phone">
+
+            </ul>
+            <form action="" class="search-form flex ">
+                <input type="text" class="search-form__input" placeholder="Поиск по сайту">
+                <button class="search-form__button"><img src="../../../img/icons/search-icon.png" alt=""
+                        class="search-form-icon"></button>
+            </form>
+            <button class="topbar__button button" onclick="showForm()">Вызов мастера</button>
+            <div class="hamburger">
+                <span class="menu-global menu-top"></span>
+                <span class="menu-global menu-middle"></span>
+                <span class="menu-global menu-bottom"></span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav_menu menu flex">
+            <li class="menu__item menu__item_active"><a href="catalog.html" class="menu__link">Каталог</a>
+                <ul class="submenu">
+                    <li class="submenu__item"><a href="" class="submenu__link">Торгово-технологическое
+                            оборудование</a></li>
+                    <li class="submenu__item"><a href="" class="submenu__link">Климатическое оборудование</a></li>
+                    <li class="submenu__item"><a href="" class="submenu__link">Моющие средства</a></li>
+            </li>
+        </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Ремонт Оборудования</a>
+            <ul class="submenu">
+                <li class="submenu__item"><a href="./remont_torgovo_technologicheskogo_oborudovaniya.html"
+                        class="submenu__link">Ремонт торгово-технологического
+                        оборудования</a></li>
+                <li class="submenu__item"><a href="./remont_holodilnogo_oborudovaniya.html" class="submenu__link">Ремонт
+                        холодильного оборудования</a></li>
+                <li class="submenu__item"><a href="./elektromontazhnye_raboty.html"
+                        class="submenu__link">Электромонтажные работы</a></li>
+                <li class="submenu__item"><a href="./diagnostika_i_remont_kondicionerov.html"
+                        class="submenu__link">Диагностика и ремонт кондиционеров</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Запчасти и инструменты</a>
+            <ul class="submenu">
+                <li class="submenu__item"><a href="" class="submenu__link">Запчасти к автокондиционерам</a></li>
+                <li class="submenu__item"><a href="" class="submenu__link">Запчасти к системам вентиляции</a></li>
+                <li class="submenu__item"><a href="" class="submenu__link">Запасные части к торгово-технологическому
+                        оборудованию</a></li>
+                <li class="submenu__item"><a href="" class="submenu__link">Инструмент для ремонта холодильников</a>
+                <li class="submenu__item"><a href="" class="submenu__link">Запчасти к холодильному оборудованию</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu__item" data-submenu="none"><a href="./404.html" class="menu__link">Новости</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">О компании</a>
+            <ul class="submenu">
+                <li class="submenu__item"><a href="./o_kompanii_elektroprometej.html" class="submenu__link">О компании
+                        ЭлектроПрометей</a></li>
+                <li class="submenu__item"><a href="./predlozhenie_dlja_partnerov.html" class="submenu__link">Предложение
+                        для партнеров</a></li>
+                <li class="submenu__item"><a href="./vakansii.html" class="submenu__link">Вакансии</a></li>
+        </li>
+        </ul>
+        </li>
+        <li class="menu__item" data-submenu="none"><a href="./contacts.html" class="menu__link">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="lang-switcher lang-switcher_ru">
+    <span class="lang-switcher__item  lang-switcher_active"  data-lang="ru">ru</span>
+    <span class="lang-switcher__item " data-lang="en">en</span>
+</div>
+    <div class="wrapper">
+        <div class="path">
+            <a href="index.html" class="path__item">Главная /</a>
+            <a href="catalog.html" class="path__item active">каталог</a>
+        </div>
+    </div>
+
+</header>
+    <div class="wrapper">
+        <h1 class="title-blue">Вакансии</h1>
+
+        <h2 class="title-black">Мастер по ремонту оборудования</h2>
+        <h3 class="title-black title-black_size-s">Должностные обязанности:</h3>
+        <p class="text">Ремонт и сервисное обслуживание торгово-технологического, холодильного и теплового оборудования
+            на объектах заказчика или территории работодателя.</p>
+        <h3 class="title-black title-black_size-s">Требования:</h3>
+        <p class="text">Наличие личного автомобиля, опыт работы.</p>
+        <h3 class="title-black title-black_size-s">Телефоны:</h3>
+        <div class="contact-list">
+            <ul class="contacts">
+                <li class="contact__item"><img src="../../img/icons/phone-icon1.png" alt="" class="contact__img"><a
+                        href="tel:+375 (17) 295-40-75" class="contact__link">+375 (17) 295-40-75</a>
+                </li>
+            </ul>
+            <ul class="contacts">
+                <li class="contact__item"><img src="../../img/icons/mts-icon.png" alt="" class="contact__img"><a
+                        href="tel:+375 (29) 707-65-99" class="contact__link">+375 (29) 707-65-99</a> </li>
+
+            </ul>
+            <ul class="contacts">
+                <li class="contact__item"><img src="../../img/icons/a1.png" alt="" class="contact__img"><a
+                        href="tel:+375 (29) 118-10-65" class="contact__link">+375 (29) 118-10-65</a>
+                </li>
+            </ul>
+        </div>
+        <h3 class="title-black title-black_size-s">Контактное лицо:</h3>
+        <p class="text text_small">Сергей Олегович</p>
+        <p class="text text_bold">Звоните с 8:00 до 23:00 в любой день недели!</p>
+
+        <h3 class="title-black title-black_size-s">Для резюме:</h3>
+        <div class="contact-list">
+            <ul class="contacts">
+                <li class="contact__item"><img src="../../img/icons/mail.png" alt="" class="contact__img"><a
+                        href="mailto:bleshev@gmail.com" class="contact__link">bleshev@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+
+     </div>   
+
+    <footer class="footer">
+    <div class="wrapper footer__wrapper flex ">
+        <ul class="col">
+            <li class="row row_head"><a href="" class="title title_size_s">Ремонт и сервис</a></li>
+            <li class="row"><a href="" class="row__link">Ремонт торгово-технологического оборудования</a></li>
+            <li class="row"><a href="" class="row__link">Ремонт холодильного оборудования</a></li>
+            <li class="row"><a href="" class="row__link">Электромонтажные работы</a></li>
+            <li class="row"><a href="" class="row__link">Диагностика и ремонт кондиционеров</a></li>
+        </ul>
+        <div>
+
+
+            <ul class="col">
+                <li class="row row_head"><a href="" class="title title_size_s">Каталог</a></li>
+                <li class="row"><a href="" class="row__link">Торгово-технологическое оборудование</a></li>
+                <li class="row"><a href="" class="row__link">Климатическое оборудование</a></li>
+                <li class="row"><a href="" class="row__link">Моющие средства</a></li>
+            </ul>
+            <ul class="col">
+                <li class="row row_head"><a href="" class="title title_size_s">Запчасти и инструмент</a></li>
+                <li class="row"><a href="" class="row__link">Запчасти к автокондиционерам</a></li>
+                <li class="row"><a href="" class="row__link">Запчасти к системам вентиляции</a></li>
+                <li class="row"><a href="" class="row__link">Запасные части к торгово-технологическому оборудованию</a>
+                </li>
+                <li class="row"><a href="" class="row__link">Инструмент для ремонта холодильников</a></li>
+                <li class="row"><a href="" class="row__link">Запчасти к холодильному оборудованию</a></li>
+            </ul>
+        </div>
+        <ul class="col">
+            <li class="row row_head"><a href="" class="title title_size_s">Контакты</a></li>
+            <li class="row"><img src="../../../img/icons/mail.png" alt=""
+                class="row__img"><a href="mailto:bleshev@gmail.com" class="row__link">bleshev@gmail.com</a></li>
+            <li class="row"><img src="../../../img/icons/mail.png" alt=""
+                class="row__img"><a href="mailto:service@electroprometey.by" class="row__link">service@electroprometey.by</a></li>
+            <li class="row"><img src="../../../img/icons/skype.png" alt=""
+                class="row__img"><a href="skype:Electroprometey?call" class="row__link">Electroprometey</a></li>
+            <li class="row"><img src="../../../img/icons/skype.png" alt=""
+                class="row__img"><a href="skype:electroprometey.1?call" class="row__link">electroprometey.1</a></li>
+            <li class="row"><img src="../../../img/icons/skype.png" alt=""
+                class="row__img"><a href="skype:Electroprometey3?call" class="row__link">Electroprometey3</a></li>
+            <li class="row"><img src="../../../img/icons/skype.png" alt=""
+                class="row__img"><a href="skype:sergey-9778?call" class="row__link">sergey-9778</a></li>
+        </ul>
+        <div>
+
+
+            <ul class="col">
+                <li class="row row_head"><a href="" class="title title_size_s">Отдел продаж</a></li>
+                <li class="row"><img src="../../../img/icons/mail.png" alt=""
+                    class="row__img"><a href="mailto:sale1@electroprometey.by" class="row__link">sale1@electroprometey.by</a></li>
+                <li class="row"><img src="../../../img/icons/mail.png" alt=""
+                    class="row__img"><a href="mailto:sale2@electroprometey.by" class="row__link">sale2@electroprometey.by</a></li>
+                <li class="row"><img src="../../../img/icons/mail.png" alt=""
+                    class="row__img"><a href="mailto:sale3@electroprometey.by" class="row__link">sale3@electroprometey.by</a></li>
+
+            </ul>
+            <ul class="col">
+                <li class="row row_head"><a href="" class="title title_size_s">Телефоны</a></li>
+                <li class="row"><img src="../../../img/icons/a1.png" alt=""
+                        class="row__img"><a href="tel:+375 29 118-10-65" class="row__link">+375 29 118-10-65</a></li>
+                <li class="row"><img src="../../../img/icons/a1.png" alt=""
+                        class="row__img"><a href="tel:+375 29 118-10-65" class="row__link">+375 29 118-10-65</a></li>
+                <li class="row"><img src="../../../img/icons/a1.png" alt=""
+                    class="row__img"><a href="tel:+375 29 118-10-65" class="row__link">+375 29 118-10-65</a></li>
+                <li class="row"><img src="../../../img/icons/a1.png" alt=""
+                    class="row__img"><a href="tel:+375 29 118-10-65" class="row__link">+375 29 118-10-65</a></li>
+                <li class="row"><img src="../../../img/icons/mts-icon.png" alt=""
+                    class="row__img"><a href="tel:+375 29 118-10-65" class="row__link">+375 29 118-10-65</a></li>
+                <li class="row"><img src="../../../img/icons/phone-icon1.png" alt=""
+                    class="row__img"><a href="tel:+375 29 118-10-65" class="row__link">+375 29 118-10-65</a></li>
+                <li class="row"><img src="../../../img/icons/fax-icon.png" alt=""
+                    class="row__img"><a href="tel:+375 29 118-10-65" class="row__link">+375 29 118-10-65</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottombar">
+        <div class="wrapper bottombar__wrapper">
+            <span class="copyright">2011-2019г. OOO "ЭлектроПрометей" | г. Минск</span>
+        </div>
+    </div>
+</footer>
+    <script src="../js/main.min.js"></script>
+    <script src="../js/vendor.min.js"></script>
+
+</body>
+
+</html>
